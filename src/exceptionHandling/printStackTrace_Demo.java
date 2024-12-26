@@ -1,6 +1,6 @@
 package exceptionHandling;
 
-public class Code_1 {
+public class printStackTrace_Demo {
     public static void main (String[] args) {
         int a=5;
         int b=0;
