@@ -21,7 +21,5 @@ public class Singleton {
             count++;
         }
     }
-
-
     private Singleton() {}
 }
