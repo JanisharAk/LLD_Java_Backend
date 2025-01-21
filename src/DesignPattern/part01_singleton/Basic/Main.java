@@ -1,4 +1,4 @@
-package DesignPattern.singleton.Basic;
+package DesignPattern.part01_singleton.Basic;
 
 public class Main {
     public static void main(String[] args) {

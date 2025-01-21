@@ -1,4 +1,4 @@
-package DesignPattern.singleton.Basic;
+package DesignPattern.part01_singleton.Basic;
 
 public class Singleton {
     private int count = 0;

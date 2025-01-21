@@ -1,4 +1,4 @@
-package DesignPattern.singleton.logger;
+package DesignPattern.part01_singleton.logger;
 
 import java.io.FileWriter;
 import java.io.IOException;

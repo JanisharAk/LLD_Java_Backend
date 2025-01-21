@@ -1,4 +1,4 @@
-package DesignPattern.singleton.concurrent;
+package DesignPattern.part01_singleton.concurrent;
 
 public class ConcurrentSingleton {
     private static ConcurrentSingleton INSTANCE = null;

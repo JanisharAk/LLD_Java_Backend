@@ -1,4 +1,4 @@
-package DesignPattern.singleton.logger;
+package DesignPattern.part01_singleton.logger;
 
 public class Client {
     public static void main(String[] args) {
