@@ -14,7 +14,7 @@ public class Pizza {
         this.sauce = sauce;
         this.toppings = toppings;
     }
-    void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Kneading dough... " + dough);
         System.out.println("Adding sauce... " + sauce);
@@ -23,13 +23,13 @@ public class Pizza {
             System.out.println(topping);
         }
     }
-    void bake() {
+    public void bake() {
         System.out.println("Baking pizza at 350 degrees for 10 minutes.");
     }
-    void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza in diagnol slices.");
     }
-    void box() {
+    public void box() {
         System.out.println("Placing pizza in official PizzaStore box.");
     }
     String getName() {

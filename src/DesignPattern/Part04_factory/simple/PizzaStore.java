@@ -3,7 +3,7 @@ package DesignPattern.Part04_factory.simple;
 // V1 -> We are only having 1 pizza that we prepare.
 // PizzaStore is responsible for creating different Pizza instances.
 public class PizzaStore {
-    public PizzaStore(SimplePizzaFactory simplePizzaFactory) {
+    public PizzaStore() {
     }
 
     Pizza orderPizza(String type) {
