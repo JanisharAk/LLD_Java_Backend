@@ -1,0 +1,21 @@
+package DesignPattern.part06_observer;
+
+public class Display2 implements Observer{
+    private int temperature;
+    private int humidity;
+    private int pressure;
+    public void print() {
+        System.out.println("Display2{" +
+                "temperature=" + temperature +
+                ", humidity=" + humidity +
+                ", pressure=" + pressure +
+                '}');
+    }
+    @Override
+    public void update(int temp, int pressure, int humidity) {
+        this.temperature = temp;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        print();
+    }
+}
