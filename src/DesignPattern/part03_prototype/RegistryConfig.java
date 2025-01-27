@@ -1,4 +1,4 @@
-package DesignPattern.Part03_prototype;
+package DesignPattern.part03_prototype;
 
 import java.util.HashMap;
 
