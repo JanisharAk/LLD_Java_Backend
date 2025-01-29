@@ -1,4 +1,4 @@
-package DesignPattern.Part04_factory.simple;
+package DesignPattern.part04_factory.simple;
 
 public class Main {
     public static void main(String[] args) {

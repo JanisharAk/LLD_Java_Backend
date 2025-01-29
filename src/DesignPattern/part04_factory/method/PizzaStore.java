@@ -1,7 +1,7 @@
-package DesignPattern.Part04_factory.method;
+package DesignPattern.part04_factory.method;
 
 
-import DesignPattern.Part04_factory.simple.Pizza;
+import DesignPattern.part04_factory.simple.Pizza;
 
 public abstract class PizzaStore {
     Pizza orderPizza(String type) {

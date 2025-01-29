@@ -1,4 +1,4 @@
-package DesignPattern.Part04_factory.simple;
+package DesignPattern.part04_factory.simple;
 
 // V1 -> We are only having 1 pizza that we prepare.
 // PizzaStore is responsible for creating different Pizza instances.
