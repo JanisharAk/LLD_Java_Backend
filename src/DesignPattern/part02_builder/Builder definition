@@ -1,0 +1,78 @@
+Builder Design Pattern:-
+      Defin:- The Builder Design Pattern is a creational design pattern used to
+              construct complex objects step by step. It separates object construction
+              from its representation, allowing for more controlled and flexible object
+              creation.
+
+
+Why Use Builder Pattern?
+     ✅ Handles complex object creation with many optional parameters.
+     ✅ Avoids telescoping constructor (multiple overloaded constructors).
+     ✅ Increases code readability and maintainability.
+     ✅ Ensures immutability (final fields, fluent API).
+
+When to Use Builder Pattern?
+     ✅ When dealing with complex objects with multiple optional parameters.
+     ✅ When using immutable objects.
+     ✅ When constructor overloading leads to telescoping constructors.
+
+     🚀 Real-World Use Cases:
+     ✔️ Creating REST API Request objects (like in Retrofit or HttpClient).
+     ✔️ Configuring Database Connection objects.
+     ✔️ Building JSON or XML responses.
+
+
+     ==========================================================
+
+Ways to Break the Builder Pattern & Their Solutions?.
+
+    1. Allowing Object Modification After Creation (Mutability Issue)
+         Problem:
+         ✅  If the constructed object allows modification after creation, it
+             defeats the purpose of immutability.
+
+         Solution:
+         ✅  Mark fields as final and remove setters to ensure immutability.
+
+    2. Allowing Partially Built Objects (Incomplete Object Problem)
+         Problem:
+         ✅  A builder may allow creating an incomplete object, leading to
+             NullPointerExceptions at runtime.
+
+         Solution:
+         ✅  Validate mandatory fields inside the build() method.
+
+    3. Exposing the Builder’s Reference (Leaking this Reference)
+         Problem:
+         ✅   Returning the builder instance before construction is complete can
+              lead to unexpected behavior.
+
+         Solution:
+         ✅   Ensure the object is fully constructed before exposing it.
+         ✅   Only expose the build() method as the final step.
+
+    4. Thread Safety Issues (Concurrent Modifications on Builder)
+         Problem:
+         ✅   If a builder is shared across multiple threads, it can cause race
+              conditions and inconsistent object states.
+
+         Solution:
+         ✅   Avoid sharing the builder between threads.
+         ✅   Use ThreadLocal if needed for multithreading.
+         ✅   Use synchronization if a builder must be shared.
+
+
+    5. Creating an Inconsistent Object State (Breaking Encapsulation)
+         Problem:
+         ✅   A builder may allow invalid field combinations, leading to an inconsistent
+               object state
+
+         Solution:
+         ✅   Add business logic validation in the build() method.
+
+    6. Forgetting to Clone the Builder Fields (Aliasing Issue)
+         Problem:
+         ✅   Mutable objects (like lists, maps, or collections) inside the builder may
+              be shared, leading to unintended side effects.
+
+         ✅   Always create a defensive copy of mutable fields.             .
