@@ -1,0 +1,86 @@
+Prototype Design Pattern:-
+Definition
+  ✅ The Prototype Design Pattern is a creational design pattern that allows cloning
+      of objects while minimizing the cost of creating new instances. Instead of creating
+      new objects from scratch, the prototype pattern creates new objects by copying an
+      existing object (prototype).
+
+  ✅  It is useful when object creation is costly, and cloning an existing object is
+       more efficient.
+
+
+Key Concept
+  ✅  Prototype (Original Object): The existing object that is cloned.
+  ✅  Clone Method (clone()): A method that creates a copy of the prototype object.
+  ✅  Shallow vs. Deep Copy: Cloning can be a shallow copy (same references) or a
+       deep copy (independent copy).
+
+Real-Life Analogy
+  ✅  Imagine you are filling out an application form. Instead of manually entering the
+       same details repeatedly, you duplicate the form and make minor modifications as
+       needed.
+
+
+Shallow Copy vs. Deep Copy
+  ✅  Shallow Copy: Copies object references (if the object has mutable fields).
+  ✅  Deep Copy: Creates a new instance of referenced objects to avoid unintended
+       modifications.
+
+When to Use the Prototype Pattern?
+  ✅ Use Prototype Pattern when:
+            Object creation is expensive (e.g., large objects, database queries).
+            You need to create copies of an existing object with minor modifications.
+            You want to avoid complex constructor logic and improve performance.
+
+❌ Avoid it when:
+      Cloning logic is complex and hard to manage.
+      Objects have circular references.
+
+      =========================================================
+
+      Ways to Break the Builder Pattern & Their Solutions
+
+1. Allowing Object Modification After Creation (Mutability Issue)
+Problem:
+   ✅ If the constructed object allows modification after creation, it defeats the
+       purpose of immutability.
+
+Solution:
+   ✔ Mark fields as final and remove setters to ensure immutability.
+
+
+2. Allowing Partially Built Objects (Incomplete Object Problem)
+Problem:
+   ✅  A builder may allow creating an incomplete object, leading to NullPointerExceptions
+       at runtime.
+Solution:
+   ✔ Validate mandatory fields inside the build() method.
+
+3. Exposing the Builder’s Reference (Leaking this Reference)
+Problem:
+   ✅  Returning the builder instance before construction is complete can lead to
+        unexpected behavior.
+
+Solution:
+   ✔ Ensure the object is fully constructed before exposing it.
+   ✔ Only expose the build() method as the final step.
+
+4. Thread Safety Issues (Concurrent Modifications on Builder)
+Problem:
+   ✅  If a builder is shared across multiple threads, it can cause race conditions and inconsistent object states.
+
+Solution:
+   ✔ Avoid sharing the builder between threads.
+   ✔ Use ThreadLocal if needed for multithreading.
+   ✔ Use synchronization if a builder must be shared.
+
+5. Creating an Inconsistent Object State (Breaking Encapsulation)
+Problem:
+   ✅  A builder may allow invalid field combinations, leading to an inconsistent object
+        state.
+
+Solution:
+   ✔ Add business logic validation in the build() method.
+
+
+
