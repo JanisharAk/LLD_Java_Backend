@@ -1,6 +1,6 @@
-package DesignPattern.Part05_adapter;
+package DesignPattern.part05_adapter;
 
-import DesignPattern.Part05_adapter.thirdParty.yesbank.YesBankApi;
+import DesignPattern.part05_adapter.thirdParty.yesbank.YesBankApi;
 
 public class YesBankAdapter implements BankApiAdapter {
     private YesBankApi yesBankApi = new YesBankApi();

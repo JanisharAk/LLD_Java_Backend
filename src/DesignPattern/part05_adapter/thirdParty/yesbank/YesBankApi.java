@@ -1,4 +1,4 @@
-package DesignPattern.Part05_adapter.thirdParty.yesbank;
+package DesignPattern.part05_adapter.thirdParty.yesbank;
 
 public class YesBankApi {
     public void doSomething() {

@@ -1,6 +1,6 @@
-package DesignPattern.Part05_adapter;
+package DesignPattern.part05_adapter;
 
-import DesignPattern.Part05_adapter.thirdParty.icici.ICICIBankApi;
+import DesignPattern.part05_adapter.thirdParty.icici.ICICIBankApi;
 
 public class ICICIBankAdapter implements BankApiAdapter {
     private ICICIBankApi iciciBankApi = new ICICIBankApi();

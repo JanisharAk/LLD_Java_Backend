@@ -1,4 +1,4 @@
-package DesignPattern.Part05_adapter.thirdParty.icici;
+package DesignPattern.part05_adapter.thirdParty.icici;
 
 public class ICICIBankApi {
     public void printSomething() {

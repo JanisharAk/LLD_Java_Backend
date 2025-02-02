@@ -1,4 +1,4 @@
-package DesignPattern.Part05_adapter;
+package DesignPattern.part05_adapter;
 
 public class Client {
 
