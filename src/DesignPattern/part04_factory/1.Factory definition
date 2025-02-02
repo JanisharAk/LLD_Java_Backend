@@ -1,0 +1,64 @@
+Factory Design Pattern:-
+Definition:
+  ✅ The Factory Design Pattern is a creational design pattern that provides an interface
+      for creating objects in a superclass but allows subclasses to alter the type of
+      objects that will be created.
+
+  ✅ It helps encapsulate object creation logic and promotes loose coupling by not exposing
+      the instantiation logic directly to the client.
+
+
+Why Use the Factory Pattern?
+  ✅ Encapsulation of Object Creation: Hides the complexity of object instantiation.
+  ✅ Loose Coupling: The client code depends on the factory, not on concrete implementations.
+  ✅ Better Maintainability: Centralized object creation makes the code easier to manage.
+  ✅ Improved Code Readability: Reduces the need for large if-else or switch statements.
+
+
+Example: Factory Pattern in Java
+Scenario:
+We need to create different types of vehicles (e.g., Car, Bike, Truck) but don’t want to
+expose object creation logic to the client.
+
+                =============================================
+
+
+1. Violating the Open-Closed Principle (OCP)
+Problem:
+  ✅ The Factory class should be open for extension but closed for modification.
+  ✅ If we modify the factory class every time a new subclass is introduced, we are breaking OCP.
+  ❌ Bad Example: Modifying the Factory Class Every Time
+
+Solution:
+  ✅ Use Reflection or Registry-based Factory to dynamically instantiate new types without
+     modifying the factory.
+
+
+2. Overcomplicating the Factory (Adding Too Much Logic)
+Problem:
+  ✅ A factory should focus only on object creation.
+  ✅ If it performs business logic, it is no longer just a factory.
+  ❌ Bad Example: Factory Doing Extra Work.
+
+Solution:
+  ✅ The factory should only create instances. Initialization logic should be done
+      elsewhere.
+
+
+3. Creating Too Many Factory Classes (Over-Fragmentation)
+Problem:
+  ✅ If every object has its own factory class, we end up with too many small classes.
+  ❌ Bad Example: Too Many Factory Classes
+
+Solution:
+  ✅ Use a single factory class for multiple related objects.
+
+4. Hardcoding Class Names in Factory
+Problem:
+  ✅ If we hardcode class names inside the factory, it becomes rigid and difficult to
+     extend.
+  ❌ Bad Example: Hardcoded Class Names
+
+Solution:
+  ✅ Use Reflection to instantiate objects dynamically.
+
