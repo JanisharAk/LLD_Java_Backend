@@ -22,6 +22,7 @@ expose object creation logic to the client.
 
                 =============================================
 
+               Ways to Break the Factory Design Pattern & Their Solutions
 
 1. Violating the Open-Closed Principle (OCP)
 Problem:
