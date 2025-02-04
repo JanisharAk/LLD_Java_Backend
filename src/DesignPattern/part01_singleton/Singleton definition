@@ -6,6 +6,13 @@ Singleton Design Pattern:-
          managing database connections, logging, or caching.
 
 
+To implement a singleton design pattern,
+Steps:
+         a:- create a class with a private constructor to prevent direct instantiation,
+         b:- private static variable to hold the single instance.
+         c:- public static method that returns this instance, creating it only if it doesn't already exist
+
+
 Key Features of Singleton Pattern:
          a:- Single Instance - Ensures only one instance of the class exists.
          b:- Global Access Point - Provides a way to access the single instance.
