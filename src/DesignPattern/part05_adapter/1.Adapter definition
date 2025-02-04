@@ -1,0 +1,25 @@
+Adapter Design Pattern
+Definition:
+  ✅ The Adapter Pattern is a structural design pattern that allows incompatible
+     interfaces to work together. It acts as a bridge between two incompatible interfaces
+      by wrapping an existing class and exposing a compatible interface.
+
+Real-World Analogy:
+  ✅ Think of a power adapter. If you have a laptop with a Type-C charger, but the wall
+     socket only supports USB-A, you need an adapter to make them work together.
+
+Why Use the Adapter Pattern?
+  ✅ Legacy Code Integration → When working with an old system that has a different interface.
+  ✅ Third-Party Library Compatibility → When using a library that doesn’t match your application's expected interface.
+  ✅ Code Reusability → Allows existing code to be used in a new way without modification.
+  ✅ Single Responsibility Principle (SRP) → Keeps the adapter separate from the core business logic.
+
+
+Types of Adapter Patterns
+  ✅ Object Adapter (Composition-based) → Uses object composition (preferred in Java).
+  ✅ Class Adapter (Inheritance-based) → Uses multiple inheritance (not possible in Java).
+
+  ==================================================================
+
+  Ways to Break the Adapter Pattern & Their Solutions
+
