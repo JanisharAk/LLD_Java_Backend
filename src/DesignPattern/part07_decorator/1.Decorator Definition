@@ -1,0 +1,63 @@
+Decorator Design Pattern:-
+Definition:-
+  ✅ The Decorator Design Pattern is a structural design pattern that allows behavior to
+      be added to individual objects, either statically or dynamically, without modifying
+      their class definition. It follows the Open-Closed Principle (OCP), enabling extension
+      of functionality without altering existing code.
+
+Key Concepts of the Decorator Pattern
+  ✅ Component Interface: Defines the common behavior for both concrete components and
+     decorators.
+  ✅ Concrete Component: The base object to which decorators add functionalities.
+  ✅ Decorator Class: Wraps the concrete component and adds new behavior dynamically.
+  ✅ Concrete Decorators: Extend the decorator class and add new functionalities.
+
+
+Why Use the Decorator Pattern?
+  ✅ Extensibility – New functionalities can be added without modifying existing code.
+  ✅ Flexible Composition – Multiple decorators can be combined dynamically.
+  ✅ Single Responsibility Principle (SRP) – Each decorator has a well-defined responsibility.
+  ✅ Avoids Subclass Explosion – Prevents an excessive number of subclasses compared to an
+     inheritance-based approach.
+
+When to Use the Decorator Pattern?
+  🔹 When you need to add functionality dynamically to an object at runtime.
+  🔹 When subclassing is not feasible due to an excessive number of variations.
+  🔹 When you want to follow Open-Closed Principle (OCP) and Single Responsibility Principle (SRP).
+
+Real-World Examples
+  ✅ Java I/O Streams (BufferedReader, InputStreamReader)
+  ✅ GUI Components (JButton with different look and feel decorators)
+  ✅ Logging Frameworks (e.g., adding timestamps, log levels dynamically)
+
+
+
+   ======================================================
+
+          Ways to Break the Decorator Design Pattern & Their Solutions
+
+
+1. Forgetting to Call the Wrapped Component’s Methods
+Problem:
+  ✅ A decorator should always call the wrapped component’s methods before adding its own behavior.
+  ✅ If a decorator forgets to delegate the method call, the chain breaks, leading to missing
+     functionalities.
+
+Solution:
+  ✅ Always Call the Wrapped Object’s Methods
+
+2. Creating Circular Dependencies
+Problem:
+  ✅ A decorator should not wrap itself or form a cycle, which leads to infinite loops or
+     StackOverflowErrors.
+Solution:
+  ✅ Use Dependency Injection Correctly.
+
+3. Not Providing a Base Component
+Problem:
+  ✅ The decorator pattern needs a base concrete implementation.
+  ✅ If no concrete class (like OrangeCone) is provided, instantiation fails
+
+Solution:
+  ✅ Use a Base Component
+
