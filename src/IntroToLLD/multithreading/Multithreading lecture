@@ -1,0 +1,41 @@
+There are several ways to create multithreading in Java.
+Below are the six primary methods:
+===============
+1. Extending Thread Class
+This method involves extending the Thread class and overriding the run() method.
+Limitations: Since Java doesn’t support multiple inheritance, extending Thread
+prevents the class from extending any other class.
+
+2. Implementing Runnable Interface
+This is a better approach as it allows extending other classes.
+🔹 Preferred over extending Thread because it allows flexibility.
+
+3. Using Callable and Future (Returning Results)
+Unlike Runnable, Callable can return a result.
+🔹 Use when you need a return value from a thread.
+
+4. Using ExecutorService (Thread Pool)
+Efficient when managing multiple threads.
+🔹 Use for better thread management instead of manually creating threads.
+
+5. Using ScheduledExecutorService (Scheduled Tasks)
+Allows scheduling tasks to run at fixed intervals.
+🔹 Use for periodic task execution (e.g., cron jobs).
+
+6. Using ForkJoinPool (Parallel Processing)
+Used for parallel computation, dividing large tasks into subtasks.
+
+🔹 Use when performing recursive parallel computations.
+
+
+
+📌 Summary
+Method	                    Description	                                Use Case
+
+Thread class	    Extends Thread and overrides run()	          Simple multithreading, but no multiple inheritance
+Runnable interface	Implements Runnable and uses Thread	          Recommended for flexibility
+Callable & Future	Implements Callable<T> and returns results	  When you need a return value
+ExecutorService  	Thread pool management	                      Efficient thread management
+ScheduledExecutorService	Schedule periodic tasks	              Scheduled task execution
+ForkJoinPool	    Parallel computation using subtasks	          Recursive, parallel task execution
+
